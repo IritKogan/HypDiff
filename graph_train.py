@@ -64,7 +64,7 @@ def test_(number_of_samples, model, graph_size, path_to_save_g, device,remove_se
             sample_graph[sample_graph < 0.5] = 0
             G = nx.from_numpy_array(sample_graph)
             # generated_graph_list.append(G)
-            f_name = path_to_save_g + str(k) + str(g_size) + str(j) + args.dataset
+            f_name = path_to_save_g + str(k) + str(g_size) + str(j) + "MUTAG"
             k += 1
 
             if remove_self:
@@ -76,7 +76,7 @@ def test_(number_of_samples, model, graph_size, path_to_save_g, device,remove_se
     # ======================================================
     # save nx files
     if save_graphs:
-        nx_f_name = path_to_save_g + "_" + args.dataset + "_" + args.decoder + "_" + args.model_vae + "_" + args.task
+        nx_f_name = path_to_save_g + "_MUTAG_results"
         with open(nx_f_name, 'wb') as f:
             pickle.dump(generated_graph_list, f)
     # # ======================================================
