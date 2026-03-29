@@ -62,7 +62,7 @@ def test_(number_of_samples, model, graph_size, path_to_save_g, device,remove_se
             # sample_graph = sample_graph[:g_size,:g_size]
             sample_graph[sample_graph >= 0.5] = 1
             sample_graph[sample_graph < 0.5] = 0
-            G = nx.from_numpy_matrix(sample_graph)
+            G = nx.from_numpy_array(sample_graph)
             # generated_graph_list.append(G)
             f_name = path_to_save_g + str(k) + str(g_size) + str(j) + args.dataset
             k += 1
@@ -91,7 +91,7 @@ def EvalTwoSet(model, test_list_adj, graph_save_path, device, Save_generated=Tru
             np.save(graph_save_path + 'generatedGraphs_adj_' + str(_f_name) + '.npy', graphs_to_writeOnDisk,
                     allow_pickle=True)
 
-            logging.info(mmd_eval(generated_graphs, [nx.from_numpy_matrix(graph.toarray()) for graph in test_list_adj]))
+            logging.info(mmd_eval(generated_graphs, [nx.from_numpy_array(graph.toarray()) for graph in test_list_adj]))
     print("====================================================")
     logging.info("====================================================")
 
@@ -100,7 +100,7 @@ def EvalTwoSet(model, test_list_adj, graph_save_path, device, Save_generated=Tru
     generated_graphs = [nx.Graph(G.subgraph(max(nx.connected_components(G), key=len))) for G in generated_graphs if
                         not nx.is_empty(G)]
 
-    statistic_ = mmd_eval(generated_graphs, [nx.from_numpy_matrix(graph.toarray()) for graph in test_list_adj],
+    statistic_ = mmd_eval(generated_graphs, [nx.from_numpy_array(graph.toarray()) for graph in test_list_adj],
                           diam=True)
     # if writeThem_in!=None:
     #     with open(writeThem_in+'MMD.log', 'w') as f:
@@ -281,19 +281,18 @@ def train(args, list_graphs, alpha, self_for_none, decoder, device, model, optim
                     sample_graph[sample_graph >= 0.5] = 1
                     sample_graph[sample_graph < 0.5] = 0
 
-                    G = nx.from_numpy_matrix(sample_graph)
+                    G = nx.from_numpy_array(sample_graph)
 
                     print("reconstructed graph vs Validation:")
                     logging.info("reconstructed graph vs Validation:")
                     reconstructed_adj = reconstructed_adj.cpu().detach().numpy()
                     reconstructed_adj[reconstructed_adj >= 0.5] = 1
                     reconstructed_adj[reconstructed_adj < 0.5] = 0
-                    reconstructed_adj = [nx.from_numpy_matrix(reconstructed_adj[i]) for i in
-                                         range(reconstructed_adj.shape[0])]
+                    reconstructed_adj = [nx.from_numpy_array(reconstructed_adj[i]) for i in range(len(reconstructed_adj))]
                     reconstructed_adj = [nx.Graph(G.subgraph(max(nx.connected_components(G), key=len))) for G in
                                          reconstructed_adj if not nx.is_empty(G)]
 
-                    target_set = [nx.from_numpy_matrix(val_adj[i].toarray()) for i in range(len(val_adj))]
+                    target_set = [nx.from_numpy_array(val_adj[i].toarray()) for i in range(len(val_adj))]
                     target_set = [nx.Graph(G.subgraph(max(nx.connected_components(G), key=len))) for G in target_set if
                                   not nx.is_empty(G)]
                     reconstruc_MMD_loss = mmd_eval(reconstructed_adj, target_set[:len(reconstructed_adj)], diam=True)

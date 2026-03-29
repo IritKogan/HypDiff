@@ -489,12 +489,12 @@ def list_graph_loader( graph_type, _max_list_size=None, return_labels=False, lim
       data = dgl.data.GINDataset(name='MUTAG', self_loop=False)
       graphs, labels = data.graphs, data.labels
       for i, graph in enumerate(graphs):
-          list_adj.append(csr_matrix(graph.adjacency_matrix().to_dense().numpy()))
+          list_adj.append(csr_matrix(graph.adj_external(scipy_fmt='csr')))
           # list_x.append(graph.ndata['feat'])
           list_x.append(None)
           list_labels.append(labels[i].cpu().item())
       graphs_to_writeOnDisk = [gr.toarray() for gr in list_adj]
-      np.save('MUTAG_lattice_graph.npy', graphs_to_writeOnDisk, allow_pickle=True)
+      np.save('MUTAG_lattice_graph.npy', np.array(graphs_to_writeOnDisk, dtype=object), allow_pickle=True)
   elif graph_type=="COLLAB":
       data = dgl.data.GINDataset(name='COLLAB', self_loop=False)
       graphs, labels = data.graphs, data.labels
