@@ -112,7 +112,8 @@ def EvalTwoSet(model, test_list_adj, graph_save_path, device, Save_generated=Tru
         np.save(graph_save_path + 'Single_comp_generatedGraphs_adj_' + str(_f_name) + '.npy', graphs_to_save, allow_pickle=True)
 
         graphs_to_writeOnDisk = [G.toarray() for G in test_list_adj]
-        np.save(graph_save_path + 'testGraphs_adj_.npy', graphs_to_writeOnDisk, allow_pickle=True)
+        graphs_to_save_test = np.array(graphs_to_writeOnDisk, dtype=object)
+        np.save(graph_save_path + 'testGraphs_adj_.npy', graphs_to_save_test, allow_pickle=True)
     return statistic_
 
 
@@ -262,7 +263,7 @@ def train(args, list_graphs, alpha, self_for_none, decoder, device, model, optim
 
             if keepThebest and min_loss > loss:
                 min_loss = loss.item()
-                torch.save(model.state_dict(), "model_new.pt")
+                torch.save(model.state_dict(), "final_trained_model.pt")
             # torch.nn.utils.clip_grad_norm(model.parameters(),  1.0044e-05)
             optimizer.step()
 
