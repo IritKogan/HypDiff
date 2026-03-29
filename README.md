@@ -82,4 +82,4 @@ This project is based on the original research and code by **RingBDStack**.
 ---
 
 ## Contributing
-If you encounter any issues with the hyperbolic stability or have suggestions for further optimization, feel free to open an issue or submit a pull request!
+If you encounter any issues with the hyperbolic stability or have suggestions for further optimization, feel free to open an issue or submit a pull request!!!
