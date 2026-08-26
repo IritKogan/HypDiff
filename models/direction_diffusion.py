@@ -105,17 +105,17 @@ class diffusion(nn.Module):
         self.posterior_mean_coef1 = betas * torch.sqrt(self.alphas_cumprod_prev) / (1. - self.alphas_cumprod)
         self.posterior_mean_coef2 = (1. - self.alphas_cumprod_prev) * torch.sqrt(self.alphas) / (
                     1. - self.alphas_cumprod)
-        self.alphas = self.alphas.cuda()
-        self.alphas_cumprod = self.alphas_cumprod.cuda()
-        self.alphas_cumprod_prev = self.alphas_cumprod_prev.cuda()
-        self.sqrt_alphas_cumprod = self.sqrt_alphas_cumprod.cuda()
-        self.sqrt_recip_alphas_cumprod = self.sqrt_recip_alphas_cumprod.cuda()
-        self.sqrt_recipm1_alphas_cumprod = self.sqrt_recipm1_alphas_cumprod.cuda()
-        self.posterior_variance = self.posterior_variance.cuda()
-        self.minus_alphas_cumprod=self.minus_alphas_cumprod.cuda()
-        self.posterior_log_variance_clipped = self.posterior_log_variance_clipped.cuda()
-        self.posterior_mean_coef1 = self.posterior_mean_coef1.cuda()
-        self.posterior_mean_coef2 = self.posterior_mean_coef2.cuda()
+        self.alphas = self.alphas.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.alphas_cumprod = self.alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.alphas_cumprod_prev = self.alphas_cumprod_prev.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.sqrt_alphas_cumprod = self.sqrt_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.sqrt_recip_alphas_cumprod = self.sqrt_recip_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.sqrt_recipm1_alphas_cumprod = self.sqrt_recipm1_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.posterior_variance = self.posterior_variance.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.minus_alphas_cumprod=self.minus_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.posterior_log_variance_clipped = self.posterior_log_variance_clipped.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.posterior_mean_coef1 = self.posterior_mean_coef1.to('cuda' if torch.cuda.is_available() else 'cpu')
+        self.posterior_mean_coef2 = self.posterior_mean_coef2.to('cuda' if torch.cuda.is_available() else 'cpu')
         self.c=1.0
         self.dc = FermiDiracDecoder(r=args.r, t=args.t)
 
@@ -200,8 +200,8 @@ class diffusion(nn.Module):
         if restrict:
             noise= self.tran_direction(direction, noise,labels)
         alphas_cumprod, minus_alphas_cumprod = self.get_alphas2(self.num_timesteps)
-        alphas_cumprod = alphas_cumprod.cuda()
-        minus_alphas_cumprod = minus_alphas_cumprod.cuda()
+        alphas_cumprod = alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        minus_alphas_cumprod = minus_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
         pri_cumprod=self.getpri(t)
         if not restrict:
             return (

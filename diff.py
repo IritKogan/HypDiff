@@ -340,12 +340,12 @@ def generate(args, h, max_num_nodes, graphs):
     embeddings = (-torch.log((1 / (embeddings + 1e-8)) - 1))
     graph_num = len(embeddings)
     max_num_node = int(max_num_nodes)
-    y_pred_long = torch.zeros(graph_num, max_num_node, max_num_node).cuda() 
+    y_pred_long = torch.zeros(graph_num, max_num_node, max_num_node).to('cuda' if torch.cuda.is_available() else 'cpu') 
     G_pred_list = []
     for i in tqdm(range(graph_num)):
         # y = F.softmax(embeddings[i])
         y = (embeddings[i] - embeddings[i].min()) / (embeddings[i].max() - embeddings[i].min())
-        y_thresh = (torch.ones(y.size(0), y.size(1))*0.5).cuda()
+        y_thresh = (torch.ones(y.size(0), y.size(1))*0.5).to('cuda' if torch.cuda.is_available() else 'cpu')
         y_result = torch.gt(y, y_thresh).float()
         if not torch.any(y_result):
             G_pred = graphs[i]

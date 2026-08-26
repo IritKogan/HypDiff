@@ -69,8 +69,8 @@ class BaseModel(nn.Module):
     def q_sample(self, x_start, t,direction, noise=None):
         noise = self.default(noise, lambda: torch.randn_like(x_start))
         alphas_cumprod, minus_alphas_cumprod = self.get_alphas(1000)
-        alphas_cumprod=alphas_cumprod.cuda()
-        minus_alphas_cumprod=minus_alphas_cumprod.cuda()
+        alphas_cumprod=alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
+        minus_alphas_cumprod=minus_alphas_cumprod.to('cuda' if torch.cuda.is_available() else 'cpu')
         return (
             self.extract(alphas_cumprod, t, x_start.shape) * x_start +
             self.extract(minus_alphas_cumprod, t, x_start.shape) * noise
