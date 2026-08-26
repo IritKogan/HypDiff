@@ -139,3 +139,13 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+ 
+# Phase B project-specific
+*.bak
+.vscode/
+temp.py
+log/
+generated_images/
+final_trained_model.pt
+kernel.pt
+MUTAG_lattice_graph.npy
