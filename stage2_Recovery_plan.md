@@ -8,7 +8,12 @@ loop **K** times using community centers computed **once from the original, unda
 graph**. This is the core adaptation and the most delicate stage: nothing new is invented,
 but three existing pieces of HypDiff are re-wired.
 
-**Status:** NOT STARTED. This document is the build plan.
+**Status:** CODE COMPLETE (all 7 steps built, tested, committed on branch
+`stage2-guided-recovery`). Baseline provably preserved (`t_star=None` reproduces Stage 0
+ROC/AP). Recovery engine returns K distinct reconstructions with valid decode
+probabilities. **Empirical validation on BA surfaced a method-level finding — see
+"Validation findings on BA" at the end — pointing to SBM as the correct next validation
+graph.**
 
 Work in the same folder Stage 0 / Stage 1 ran in — the repo root
 (`C:\Users\iritk\Desktop\Phase B Code\HypDiff`), where `main.py`, `diff.py`,
@@ -278,3 +283,56 @@ existing Fermi-Dirac `r`, `t` where they are. Document defaults so Stage 4 can s
 - `config.py` — new `t_star`, `K`, `tau` parameters.
 - A one-copy smoke test confirming K distinct reconstructions and valid per-removed-edge
   decode probabilities — the handoff to Stage 3.
+
+---
+
+## Validation findings on BA (empirical, after build)
+
+The engine was validated on a Stage 1 damaged copy (BA, random 10% removal, 38 removed
+edges), using a properly trained frozen model (200 encoder / 50 diffusion epochs). The code
+is correct; the finding is about the **method on BA**, and it is a genuine result worth
+recording for the advisor.
+
+**1. The signal lives in the encoder, and diffusion degrades it on BA.**
+Decoding edge probabilities (Fermi-Dirac, decode at `c=0.6`) on three edge groups:
+
+| readout                         | surviving | removed | random | removed − random |
+| ------------------------------- | --------- | ------- | ------ | ---------------- |
+| raw encoder `h0` (no diffusion) | 0.769     | 0.623   | 0.550  | **+0.073**       |
+| recovered `sa`, `t*=2`          | 0.688     | 0.607   | 0.584  | +0.023           |
+| recovered `sa`, `t*=5`          | 0.757     | 0.748   | 0.782  | **−0.035**       |
+| recovered `sa`, `t*=10–40`      | ~0.75     | ~0.75   | ~0.80  | ≈ −0.04          |
+| recovered `sa`, `t*≥80`         | ~0        | ~0      | ~0     | ≈ 0              |
+
+The raw encoder ranks _surviving > removed > random_ at usable magnitudes — exactly the
+expected shape (removed edges are real edges the encoder saw disconnected). But **no `t*`
+improves on it**: `t*=2` preserves a weaker version of the ranking, `t*≥5` inverts it
+(random scores above removed), and `t*≥80` collapses everything. This is the project
+book's §4 risk "_t\* too large discards the surviving structure_" observed directly — and
+here even small `t*` does not add value.
+
+**2. Root cause — BA has no community structure.** `Community_cluster` (hardcoded
+`n_clusters=3`) assigned all 100 nodes to a single cluster, so the anisotropic
+community/angular guidance has nothing to steer with. Corroborated by the trained model's
+link-reconstruction ROC ≈ 0.48 on the original graph (at/below random). The method is
+hub- and community-guided by design; BA supplies neither.
+
+**3. Not a scale/curvature artifact.** Decoding `sa` at the matching curvature `c=1.0`
+gives a degenerate constant `sqdist≈1241` (all probs 0), so the curvature mismatch is not
+the lever. The problem is that diffusion moves the points, not how we measure them.
+
+### Consequence
+
+- **Stage 2 code is complete and correct** — this is a data/method observation, not a bug.
+- **BA is the wrong validation graph** for this method. **SBM** (planted communities) is the
+  correct next test, and Stage 5 needs it regardless. If SBM shows `removed ≫ random` at a
+  clean `t*`, the method and this engine are jointly validated; if it does not, escalate the
+  diffusion-quality question (ROC < 0.5 on the original graph) to the advisor.
+
+### For the advisor
+
+- On BA, guided recovery does not beat the raw encoder; the best link signal is `h0` with no
+  diffusion, and larger `t*` harms it. Likely because BA lacks the community structure the
+  method exploits.
+- Recommend validating on SBM before drawing any conclusion about the framework, and
+  separately reviewing why the diffusion's own link ROC on BA is ≈ 0.48.
