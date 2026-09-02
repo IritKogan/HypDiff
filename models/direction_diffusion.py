@@ -290,7 +290,10 @@ class diffusion(nn.Module):
 
         return pred_img_t, x_start
 
-    def p_sample_loop(self, x,adj,lables,u0, return_all_timesteps=False,graphset=False):
+    def p_sample_loop(self, x,adj,lables,u0, return_all_timesteps=False,graphset=False, t_star=None):
+        # Phase B: t_star=None  -> original behaviour (full noise, full schedule).
+        #          t_star=int   -> partial start: noise the latent only up to t_star
+        #                          (via the existing q_sample) and denoise from there.
         shape = x.shape
         # print(x)
         batch, device = shape[0], self.device
@@ -305,20 +308,32 @@ class diffusion(nn.Module):
         for i, h_data in enumerate(h):
             h[i] = self.manifold.logmap(u0[lables[i]], h_data, c=1.0)
         h2=self.normalization(h)
-
-        img=img+h2
+ 
+        if t_star is None:
+            # --- baseline: start from full noise + latent, run the whole schedule ---
+            img = img + h2
+            start_t = self.num_timesteps
+        else:
+            # --- Phase B guided recovery: start partway, at step t_star ---
+            assert 1 <= int(t_star) <= self.num_timesteps - 1, \
+                f"t_star must be in [1, {self.num_timesteps - 1}], got {t_star}"
+            t_batched = torch.full((batch,), int(t_star), device=device, dtype=torch.long)
+            img = self.q_sample(x_start=h2, t=t_batched, direction=direction,
+                                noise=None, labels=lables, u0=u0, restrict=True)
+            start_t = int(t_star)
+ 
         imgs = [img]
         if(graphset):
             adj=1
         else:
             adj=self.edge(adj)
-        # for t in tqdm(reversed(range(0, self.num_timesteps)), desc='sampling loop time step', total=self.num_timesteps):
-        for t in reversed(range(0, self.num_timesteps)):
+        # for t in tqdm(reversed(range(0, start_t)), desc='sampling loop time step', total=start_t):
+        for t in reversed(range(0, start_t)):
             self_cond = x_start if self_condition else None
             img = img
             img, x_start = self.p_sample(img, h2,adj,direction,lables,u0,t, self_cond,graphset)
             imgs.append(img)
-
+ 
         ret = img if not return_all_timesteps else torch.stack(imgs, dim=1)
         # ret = self.unnormalize(ret)
         #ret = self.manifold.expmap0(ret, c=1.0)
@@ -328,7 +343,6 @@ class diffusion(nn.Module):
         for i,x_pred in enumerate(ret):
             #ret[i]=self.manifold.expmap(u0[lables[i]],x0_pred,c=1.0)
             ret[i]=self.manifold.expmap(ret[i],u20[lables[i]],c=1.0)
-            
         return ret
 
 
