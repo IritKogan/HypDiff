@@ -63,7 +63,7 @@ config_args = {
         'epoch_load': (5000, 'maximum number of epochs to train for')
     },
     'stage2_config': {
-        't_star': (100, 'Stage 2: diffusion truncation step for partial-start recovery (1..num_timesteps-1)'),
+        't_star': (15, 'Stage 2: diffusion truncation step for partial-start recovery (1..num_timesteps-1)'),
         'K': (5, 'Stage 2: number of reconstructions per damaged graph'),
         'tau': (0.5, 'Stage 3: edge-recovery probability threshold'),
     },
