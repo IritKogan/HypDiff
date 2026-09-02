@@ -62,6 +62,11 @@ config_args = {
         'epoch_diff': (5000, 'maximum number of epochs to train for'),
         'epoch_load': (5000, 'maximum number of epochs to train for')
     },
+    'stage2_config': {
+        't_star': (100, 'Stage 2: diffusion truncation step for partial-start recovery (1..num_timesteps-1)'),
+        'K': (5, 'Stage 2: number of reconstructions per damaged graph'),
+        'tau': (0.5, 'Stage 3: edge-recovery probability threshold'),
+    },
     'training_hvae_config': {
         'Vis_step': (1000, 'at every Vis_step, the plots will be updated'),
         'redraw': (False, 'either update the log plot each step'),
