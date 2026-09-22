@@ -1,0 +1,152 @@
+{
+  "settings": {
+    "dataset": "sbm",
+    "frozen": "logs/lptask/sbm/frozen_truecomm",
+    "perturbed_dir": null,
+    "t_star": 60,
+    "tau": 0.825,
+    "K": 5,
+    "methods": [
+      "random",
+      "targeted"
+    ],
+    "p_values": [
+      30
+    ],
+    "lambdas": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      16.0
+    ],
+    "ddof": 1,
+    "seed": 0,
+    "device": "cpu",
+    "no_clamp": false,
+    "out": "stage4_noise_scale",
+    "plot": true
+  },
+  "rows": [
+    {
+      "lambda": 1.0,
+      "method": "random",
+      "p_percent": 30,
+      "stability_score": 0.85671875,
+      "thr_diffusion_std": 0.050715101147242134,
+      "structural_std": 0.05958501782292536,
+      "raw_removed_mean": 0.7996000813127873,
+      "raw_null_mean": 0.24012445050040165,
+      "raw_separation": 0.5594756308123856,
+      "raw_diffusion_std": 0.005513547741509828
+    },
+    {
+      "lambda": 1.0,
+      "method": "targeted",
+      "p_percent": 30,
+      "stability_score": 0.8612500000000001,
+      "thr_diffusion_std": 0.019136638615493577,
+      "structural_std": 0.03944465840121939,
+      "raw_removed_mean": 0.7949958072192879,
+      "raw_null_mean": 0.23092992824831865,
+      "raw_separation": 0.5640658789709692,
+      "raw_diffusion_std": 0.0012937365357082971
+    },
+    {
+      "lambda": 2.0,
+      "method": "random",
+      "p_percent": 30,
+      "stability_score": 0.765625,
+      "thr_diffusion_std": 0.08776814382401225,
+      "structural_std": 0.09360231422975968,
+      "raw_removed_mean": 0.7870945629287649,
+      "raw_null_mean": 0.23599488038716956,
+      "raw_separation": 0.5510996825415954,
+      "raw_diffusion_std": 0.0069481863031938046
+    },
+    {
+      "lambda": 2.0,
+      "method": "targeted",
+      "p_percent": 30,
+      "stability_score": 0.75046875,
+      "thr_diffusion_std": 0.04468176318071501,
+      "structural_std": 0.053603087743384716,
+      "raw_removed_mean": 0.781320425962795,
+      "raw_null_mean": 0.22643922348118392,
+      "raw_separation": 0.5548812024816111,
+      "raw_diffusion_std": 0.0034407708873054866
+    },
+    {
+      "lambda": 4.0,
+      "method": "random",
+      "p_percent": 30,
+      "stability_score": 0.6379687500000001,
+      "thr_diffusion_std": 0.11481983169296148,
+      "structural_std": 0.0891159379158689,
+      "raw_removed_mean": 0.7753443559003432,
+      "raw_null_mean": 0.2322235787077282,
+      "raw_separation": 0.543120777192615,
+      "raw_diffusion_std": 0.00591560392305971
+    },
+    {
+      "lambda": 4.0,
+      "method": "targeted",
+      "p_percent": 30,
+      "stability_score": 0.618125,
+      "thr_diffusion_std": 0.11320309804174972,
+      "structural_std": 0.08285081660732138,
+      "raw_removed_mean": 0.7704466662668923,
+      "raw_null_mean": 0.22337307949178528,
+      "raw_separation": 0.547073586775107,
+      "raw_diffusion_std": 0.006005054408383586
+    },
+    {
+      "lambda": 8.0,
+      "method": "random",
+      "p_percent": 30,
+      "stability_score": 0.8168749999999999,
+      "thr_diffusion_std": 0.0773753092178797,
+      "structural_std": 0.04897938377238144,
+      "raw_removed_mean": 0.7804686487187869,
+      "raw_null_mean": 0.2342720603909914,
+      "raw_separation": 0.5461965883277955,
+      "raw_diffusion_std": 0.002917511552223523
+    },
+    {
+      "lambda": 8.0,
+      "method": "targeted",
+      "p_percent": 30,
+      "stability_score": 0.784375,
+      "thr_diffusion_std": 0.1150030782536385,
+      "structural_std": 0.06267769877405448,
+      "raw_removed_mean": 0.7755179046114256,
+      "raw_null_mean": 0.22548281272212983,
+      "raw_separation": 0.5500350918892958,
+      "raw_diffusion_std": 0.004441682180411444
+    },
+    {
+      "lambda": 16.0,
+      "method": "random",
+      "p_percent": 30,
+      "stability_score": 0.931875,
+      "thr_diffusion_std": 0.0011048543456039805,
+      "structural_std": 0.018239580358842326,
+      "raw_removed_mean": 0.7878006178047136,
+      "raw_null_mean": 0.23716383955354398,
+      "raw_separation": 0.5506367782511696,
+      "raw_diffusion_std": 0.0009769600524550306
+    },
+    {
+      "lambda": 16.0,
+      "method": "targeted",
+      "p_percent": 30,
+      "stability_score": 0.92546875,
+      "thr_diffusion_std": 0.004419417382415922,
+      "structural_std": 0.016288849127632607,
+      "raw_removed_mean": 0.7829731977931,
+      "raw_null_mean": 0.2285977898933615,
+      "raw_separation": 0.5543754078997385,
+      "raw_diffusion_std": 0.0013013052103230068
+    }
+  ]
+}

@@ -1,0 +1,1872 @@
+{
+  "settings": {
+    "dataset": "sbm",
+    "frozen": "logs/lptask/sbm/frozen_louvain",
+    "perturbed_dir": null,
+    "t_star": 60,
+    "K": 5,
+    "methods": [
+      "random",
+      "targeted"
+    ],
+    "p_values": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "taus": null,
+    "ddof": 1,
+    "seed": 0,
+    "device": "cpu",
+    "no_clamp": false,
+    "cache": null,
+    "from_cache": false,
+    "out": "stage4_tau_calib",
+    "plot": true
+  },
+  "recommended_tau_maxJ": 0.3,
+  "rows": [
+    {
+      "tau": 0.3,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.3,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.3,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.3,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.3,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.3,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.3,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.3,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.3,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.3,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.325,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.325,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.325,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.325,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.325,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.325,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.325,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.325,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.325,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.325,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.35,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.35,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.35,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.35,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.35,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.35,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.35,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.35,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.35,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.35,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.375,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.375,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.375,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.375,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.375,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.375,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.375,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.375,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.375,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.375,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.4,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.4,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.4,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.4,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.4,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.4,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.4,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.4,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.4,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.4,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.425,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.425,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.425,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.425,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.425,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.425,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.425,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.425,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.425,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.425,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.45,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.45,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.45,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.45,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.45,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.45,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.45,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.45,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.45,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.45,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.475,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.475,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.475,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.475,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.475,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9314553990610328,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6599553990610328
+    },
+    {
+      "tau": 0.475,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.475,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.475,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.475,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.475,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.5,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.5,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.5,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.5,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.5,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9313615023474178,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6598615023474178
+    },
+    {
+      "tau": 0.5,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.5,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.5,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.5,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.5,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.525,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.525,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.525,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.525,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.525,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9312676056338027,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6597676056338028
+    },
+    {
+      "tau": 0.525,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.525,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.525,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.525,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.525,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.55,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.55,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.55,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.55,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.55,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9312676056338027,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6597676056338028
+    },
+    {
+      "tau": 0.55,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.55,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.55,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.55,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.55,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.575,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.575,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.575,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.575,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.575,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9312676056338027,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6597676056338028
+    },
+    {
+      "tau": 0.575,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.575,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.575,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.575,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.575,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.6,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.6,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.6,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.6,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.6,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9311737089201877,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6596737089201877
+    },
+    {
+      "tau": 0.6,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.6,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.6,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.6,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.6,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.625,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.625,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.625,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.625,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.625,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9310798122065727,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6595798122065727
+    },
+    {
+      "tau": 0.625,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.625,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.625,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.625,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.625,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.65,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.65,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.65,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.65,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.65,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9309859154929578,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6594859154929579
+    },
+    {
+      "tau": 0.65,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.65,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.65,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.65,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.65,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.675,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.675,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.675,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.675,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.675,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9309859154929578,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6594859154929579
+    },
+    {
+      "tau": 0.675,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.675,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.675,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.675,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.675,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.7,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.7,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.7,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.7,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.7,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9307042253521128,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6592042253521129
+    },
+    {
+      "tau": 0.7,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.7,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.7,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.7,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9252941176470589,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.645794117647059
+    },
+    {
+      "tau": 0.7,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.725,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9372093023255814,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6582093023255814
+    },
+    {
+      "tau": 0.725,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.725,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.93203125,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.67053125
+    },
+    {
+      "tau": 0.725,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.725,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9294835680751173,
+      "null_pass_rate": 0.27149999999999996,
+      "youden_J": 0.6579835680751174
+    },
+    {
+      "tau": 0.725,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.725,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.2545,
+      "youden_J": 0.6678529411764706
+    },
+    {
+      "tau": 0.725,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.725,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9249411764705883,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.6454411764705883
+    },
+    {
+      "tau": 0.725,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.927230046948357,
+      "null_pass_rate": 0.27199999999999996,
+      "youden_J": 0.655230046948357
+    },
+    {
+      "tau": 0.75,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9367441860465116,
+      "null_pass_rate": 0.279,
+      "youden_J": 0.6577441860465115
+    },
+    {
+      "tau": 0.75,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9305882352941177,
+      "null_pass_rate": 0.265,
+      "youden_J": 0.6655882352941177
+    },
+    {
+      "tau": 0.75,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.931875,
+      "null_pass_rate": 0.2615,
+      "youden_J": 0.6703749999999999
+    },
+    {
+      "tau": 0.75,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.75,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9275117370892019,
+      "null_pass_rate": 0.2708,
+      "youden_J": 0.6567117370892019
+    },
+    {
+      "tau": 0.75,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9255813953488372,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6500813953488372
+    },
+    {
+      "tau": 0.75,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9223529411764707,
+      "null_pass_rate": 0.25439999999999996,
+      "youden_J": 0.6679529411764707
+    },
+    {
+      "tau": 0.75,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.75,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9245882352941177,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.6450882352941177
+    },
+    {
+      "tau": 0.75,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.9268544600938968,
+      "null_pass_rate": 0.27190000000000003,
+      "youden_J": 0.6549544600938968
+    },
+    {
+      "tau": 0.775,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9348837209302326,
+      "null_pass_rate": 0.27890000000000004,
+      "youden_J": 0.6559837209302326
+    },
+    {
+      "tau": 0.775,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9294117647058824,
+      "null_pass_rate": 0.2649,
+      "youden_J": 0.6645117647058824
+    },
+    {
+      "tau": 0.775,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.9310937499999999,
+      "null_pass_rate": 0.261,
+      "youden_J": 0.6700937499999999
+    },
+    {
+      "tau": 0.775,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9411764705882353,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6656764705882353
+    },
+    {
+      "tau": 0.775,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.9215962441314554,
+      "null_pass_rate": 0.26949999999999996,
+      "youden_J": 0.6520962441314554
+    },
+    {
+      "tau": 0.775,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9251162790697676,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.6496162790697676
+    },
+    {
+      "tau": 0.775,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9207058823529412,
+      "null_pass_rate": 0.25389999999999996,
+      "youden_J": 0.6668058823529412
+    },
+    {
+      "tau": 0.775,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.928125,
+      "null_pass_rate": 0.262,
+      "youden_J": 0.666125
+    },
+    {
+      "tau": 0.775,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9236470588235296,
+      "null_pass_rate": 0.27949999999999997,
+      "youden_J": 0.6441470588235296
+    },
+    {
+      "tau": 0.775,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.9261032863849765,
+      "null_pass_rate": 0.2718,
+      "youden_J": 0.6543032863849765
+    },
+    {
+      "tau": 0.8,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9293023255813952,
+      "null_pass_rate": 0.2769,
+      "youden_J": 0.6524023255813953
+    },
+    {
+      "tau": 0.8,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9272941176470588,
+      "null_pass_rate": 0.26389999999999997,
+      "youden_J": 0.6633941176470588
+    },
+    {
+      "tau": 0.8,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.92796875,
+      "null_pass_rate": 0.25980000000000003,
+      "youden_J": 0.66816875
+    },
+    {
+      "tau": 0.8,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9391764705882354,
+      "null_pass_rate": 0.27410000000000007,
+      "youden_J": 0.6650764705882353
+    },
+    {
+      "tau": 0.8,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.907887323943662,
+      "null_pass_rate": 0.2651,
+      "youden_J": 0.642787323943662
+    },
+    {
+      "tau": 0.8,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9223255813953489,
+      "null_pass_rate": 0.27549999999999997,
+      "youden_J": 0.646825581395349
+    },
+    {
+      "tau": 0.8,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9183529411764706,
+      "null_pass_rate": 0.25249999999999995,
+      "youden_J": 0.6658529411764706
+    },
+    {
+      "tau": 0.8,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.9268749999999999,
+      "null_pass_rate": 0.26139999999999997,
+      "youden_J": 0.6654749999999999
+    },
+    {
+      "tau": 0.8,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9205882352941177,
+      "null_pass_rate": 0.27930000000000005,
+      "youden_J": 0.6412882352941176
+    },
+    {
+      "tau": 0.8,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.9232863849765259,
+      "null_pass_rate": 0.271,
+      "youden_J": 0.6522863849765259
+    },
+    {
+      "tau": 0.825,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.9125581395348836,
+      "null_pass_rate": 0.27190000000000003,
+      "youden_J": 0.6406581395348836
+    },
+    {
+      "tau": 0.825,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.9131764705882353,
+      "null_pass_rate": 0.2592,
+      "youden_J": 0.6539764705882353
+    },
+    {
+      "tau": 0.825,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.9120312499999998,
+      "null_pass_rate": 0.25279999999999997,
+      "youden_J": 0.6592312499999999
+    },
+    {
+      "tau": 0.825,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.9261176470588237,
+      "null_pass_rate": 0.2697,
+      "youden_J": 0.6564176470588237
+    },
+    {
+      "tau": 0.825,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.8698591549295775,
+      "null_pass_rate": 0.25359999999999994,
+      "youden_J": 0.6162591549295776
+    },
+    {
+      "tau": 0.825,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.9190697674418606,
+      "null_pass_rate": 0.266,
+      "youden_J": 0.6530697674418606
+    },
+    {
+      "tau": 0.825,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.9101176470588236,
+      "null_pass_rate": 0.24569999999999997,
+      "youden_J": 0.6644176470588237
+    },
+    {
+      "tau": 0.825,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.91890625,
+      "null_pass_rate": 0.2576,
+      "youden_J": 0.66130625
+    },
+    {
+      "tau": 0.825,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.9119999999999999,
+      "null_pass_rate": 0.2763000000000001,
+      "youden_J": 0.6356999999999998
+    },
+    {
+      "tau": 0.825,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.9040375586854459,
+      "null_pass_rate": 0.26480000000000004,
+      "youden_J": 0.6392375586854459
+    },
+    {
+      "tau": 0.85,
+      "method": "random",
+      "p_percent": 10,
+      "score": 0.856279069767442,
+      "null_pass_rate": 0.24710000000000001,
+      "youden_J": 0.609179069767442
+    },
+    {
+      "tau": 0.85,
+      "method": "random",
+      "p_percent": 20,
+      "score": 0.8449411764705882,
+      "null_pass_rate": 0.23650000000000002,
+      "youden_J": 0.6084411764705882
+    },
+    {
+      "tau": 0.85,
+      "method": "random",
+      "p_percent": 30,
+      "score": 0.83109375,
+      "null_pass_rate": 0.2318,
+      "youden_J": 0.59929375
+    },
+    {
+      "tau": 0.85,
+      "method": "random",
+      "p_percent": 40,
+      "score": 0.8005882352941176,
+      "null_pass_rate": 0.2327,
+      "youden_J": 0.5678882352941176
+    },
+    {
+      "tau": 0.85,
+      "method": "random",
+      "p_percent": 50,
+      "score": 0.7296713615023476,
+      "null_pass_rate": 0.2124,
+      "youden_J": 0.5172713615023475
+    },
+    {
+      "tau": 0.85,
+      "method": "targeted",
+      "p_percent": 10,
+      "score": 0.8716279069767442,
+      "null_pass_rate": 0.24370000000000003,
+      "youden_J": 0.6279279069767442
+    },
+    {
+      "tau": 0.85,
+      "method": "targeted",
+      "p_percent": 20,
+      "score": 0.8609411764705882,
+      "null_pass_rate": 0.2254,
+      "youden_J": 0.6355411764705883
+    },
+    {
+      "tau": 0.85,
+      "method": "targeted",
+      "p_percent": 30,
+      "score": 0.87984375,
+      "null_pass_rate": 0.24579999999999996,
+      "youden_J": 0.63404375
+    },
+    {
+      "tau": 0.85,
+      "method": "targeted",
+      "p_percent": 40,
+      "score": 0.8488235294117648,
+      "null_pass_rate": 0.2544,
+      "youden_J": 0.5944235294117648
+    },
+    {
+      "tau": 0.85,
+      "method": "targeted",
+      "p_percent": 50,
+      "score": 0.7868544600938966,
+      "null_pass_rate": 0.2414,
+      "youden_J": 0.5454544600938966
+    }
+  ]
+}
